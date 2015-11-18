@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 use perfectTime\Http\Requests;
 use perfectTime\Http\Controllers\Controller;
 use Illuminate\Routing\Route;
-use perfectTime\Almacen;
+use perfectTime\Proveedor;
 
-class AlmacenController extends Controller
+class ProveedorController extends Controller
 {
 
   public function __construct() {
@@ -18,13 +18,13 @@ class AlmacenController extends Controller
   }
 
   public function find(Route $route) {
-    $this->almacen = Almacen::find($route->getParameter('almacenes'));
+    $this->proveedor = Proveedor::find($route->getParameter('proveedores'));
   }
 
     public function index()
     {
-      $almacen = Almacen::all();
-      return response()->json($almacen->toArray());
+      $proveedor = Proveedor::all();
+      return response()->json($proveedor->toArray());
     }
     public function create()
     {
@@ -32,12 +32,12 @@ class AlmacenController extends Controller
     }
     public function store(Request $request)
     {
-        Almacen::create($request->all());
-        return response()->json(['mensaje' => "Almacén creado"]);
+        Proveedor::create($request->all());
+        return response()->json(['mensaje' => "Proveedor creado"]);
     }
     public function show($id)
     {
-        return response()->json($this->almacen);
+        return response()->json($this->proveedor);
     }
     public function edit($id)
     {
@@ -45,13 +45,13 @@ class AlmacenController extends Controller
     }
     public function update(Request $request, $id)
     {
-        $this->almacen->fill($request->all());
-        $this->almacen->save();
-        return response()->json(['mensaje' => 'Almacén actualizado']);
+        $this->proveedor->fill($request->all());
+        $this->proveedor->save();
+        return response()->json(['mensaje' => 'Proveedor actualizado']);
     }
     public function destroy($id)
     {
-        $this->almacen->delete();
-        return response()->json(['mensaje' => 'Almacén eliminado']);
+        $this->proveedor->delete();
+        return response()->json(['mensaje' => 'Proveedor eliminado']);
     }
 }

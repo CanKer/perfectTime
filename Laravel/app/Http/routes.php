@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('almacen', 'AlmacenController');
+Route::resource('almacenes', 'AlmacenController');
 Route::resource('clientes', 'ClientesController');
 Route::resource('productos', 'ProductosController');
 Route::resource('usuarios', 'UsuariosController');
 Route::resource('categorias', 'CategoriasController');
+Route::resource('proveedores', 'ProveedorController');
