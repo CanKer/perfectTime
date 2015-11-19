@@ -17,7 +17,7 @@ Laravel is accessible, yet powerful, providing powerful tools needed for large, 
 
 Poner la carpeta "Laravel" dentro de un servidor Apache; se puede usar aplicaciones como XAMP, WAMP, LAMP o MAMP; de ser así se colocaría dentro de la carpeta htdocs o www, según sea el caso. Una vez dentro se necesitará la instalación de Composer ("https://getcomposer.org"). Se abrirá la terminal y se dirigirá hasta la carpeta del proyecto y una vez en la raíz se ejecutará el comando "php artisan key:generate", después se usará el comando "php artisan serve", éste último para iniciar nuestro servidor que es el que aloja, permite y envía los datos por medio de peticiones HTTP (GET, POST, PUT, DELETE) en formato JSON.
 
-La carpeta llamada Angular se puede poner en prácticamente cualquier sitio, ya que al estar programada con javascript no necesita de un servidor para su funcionamiento. Está desarrollada con altos estándares de desarrollo conocidos como ECMASCRIPT 5 y ECMASCRIPT 6 para su fácil manteminiento y eficacia al momento de ser ejecutado, así como para ser escalable sin problema alguno. Tiene implementado 7 CRUDs (Formularios para Crear, Leer, Actualizar y Eliminar, por sus siglas en inglés), estos están ubicados en la carpeta raíz en el archivo dashboard.html; no fue implementado sistema de log-in. El archivo Index.html contiene el catálogo de los productos que perfecTime maneja. 
+La carpeta llamada Angular se puede poner en prácticamente cualquier sitio, ya que al estar programada con javascript no necesita de un servidor para su funcionamiento. Está desarrollada con altos estándares de desarrollo conocidos como ECMASCRIPT 5 y ECMASCRIPT 6 para su fácil manteminiento y eficacia al momento de ser ejecutado, así como para ser escalable sin problema alguno. Tiene implementado 7 CRUDs (Formularios para Crear, Leer, Actualizar y Eliminar, por sus siglas en inglés), estos están ubicados en la carpeta raíz en el archivo dashboard.html; no fue implementado sistema de log-in. El archivo Index.html contiene el catálogo de los productos que perfecTime maneja.
 
 ## Colaboradores
 
@@ -35,4 +35,4 @@ Esta aplicación fue diseñada con altos estándares de seguridad, pero se dejó
 
 ### License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+Esta licencia está

@@ -20,9 +20,9 @@ class CreateProductosTable extends Migration
             $table->string('precioCompra');
             $table->string('img');
 
-            $table->string('categoria');
-            $table->string('proveedor');
-            $table->string('almacen');
+            $table->unsignedInteger('categoria');
+            $table->unsignedInteger('proveedor');
+            $table->unsignedInteger('almacen');
 
 
             $table->SoftDeletes();
@@ -30,9 +30,9 @@ class CreateProductosTable extends Migration
         });
 
         Schema::table('productos', function($table) {
-          $table->foreign('categoria')->references('nombre')->on('categorias');
-          $table->foreign('proveedor')->references('nombre')->on('proveedores');
-          $table->foreign('almacen')->references('nombre')->on('almacenes');
+          $table->foreign('categoria')->references('id')->on('categorias');
+          $table->foreign('proveedor')->references('id')->on('proveedores');
+          $table->foreign('almacen')->references('id')->on('almacenes');
         });
     }
 

@@ -19,22 +19,17 @@ class CreateClientesTable extends Migration
             $table->string('apellidoM');
             $table->string('email')->unique();
             $table->string('RFC');
-            $table->string('calle');
-            $table->string('numE');
-            $table->string('numI');
-            $table->string('colonia');
-            $table->string('cp');
-            $table->string('ciudad');
-            $table->string('estado');
-            $table->string('pais');
-            $table->string('telefono');
+
+            $table->unsignedInteger('domicilio');
             $table->unsignedInteger('id_tipo_cliente');
+            
             $table->SoftDeletes();
             $table->timestamps();
         });
 
         Schema::table('clientes', function($table)  {
           $table->foreign('id_tipo_cliente')->references('id')->on('tipo_clientes');
+          $table->foreign('domicilio')->references('id')->on('domicilios');
         });
     }
 

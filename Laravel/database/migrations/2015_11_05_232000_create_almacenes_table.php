@@ -17,18 +17,14 @@ class CreateAlmacenesTable extends Migration
             $table->string('nombre');
             $table->string('encargado');
             $table->string('email');
-            $table->string('telefono');
-            $table->string('calle');
-            $table->string('numE');
-            $table->string('numbI');
-            $table->string('colonia');
-            $table->string('ciudad');
-            $table->string('cp');
-            $table->string('estado');
-            $table->string('pais');
+
+            $table->unsignedInteger('domicilio');
 
             $table->SoftDeletes();
             $table->timestamps();
+        });
+        Schema::table('almacenes', function($table)  {
+          $table->foreign('domicilio')->references('id')->on('domicilios');
         });
     }
 

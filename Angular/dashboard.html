@@ -21,17 +21,18 @@
         <div class="column col-xs-3" id="sidebar">
 
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default" ng-repeat="menu in menustl">
+  <div class="panel panel-default" ng-repeat="menu in menus">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
-        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{menu}}" aria-expanded="true" aria-controls="{{menu}}">
+        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{menu.nombre}}" aria-expanded="true" aria-controls="{{menu.nombre}}">
           {{menu.nombre}}
         </a>
       </h4>
     </div>
-    <div id="{{menu}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-      <div class="panel-body">
-         sdfsdfa
+    <div id="{{menu.nombre}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+      <div class="panel-body" ng-repeat="i in [0,1,2,3,4,5,6,7,8]">
+          <a href="#">{{menu.categorias[i].nombre}}</a>
+
       </div>
     </div>
   </div>
@@ -71,7 +72,7 @@
               <h2>Categoria: {{currentCategory}}
                 <a  href="#" class="btn btn-primary btn-xs pull-right" ng-click="showWindow()"><i class="glyphicon glyhicon-plus-sign"></i>Agregar Producto</a></h2>
               <ul>
-                <li ng-repeat="producto in productos | filter: {id_categoria: currentCategory} | filter:search">
+                <li ng-repeat="producto in productos | filter: {producto: currentCategory} | filter:search">
                   <p>
                     <a href="#">{{producto.nombre}}</a>
 
