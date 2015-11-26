@@ -123,7 +123,7 @@
             $scope.productos.push(prod);
           });
 
-              Producto.$save(producto);
+            Producto.$save(producto);
         }
         $('#productoModal').modal('hide');
       } else {
