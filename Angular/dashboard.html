@@ -21,7 +21,7 @@
         <div class="column col-xs-3" id="sidebar">
 
           <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-  <div class="panel panel-default" ng-repeat="menu in menus">
+  <div class="panel panel-default" ng-repeat="menu in menustl">
     <div class="panel-heading" role="tab" id="headingOne">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#{{menu.nombre}}" aria-expanded="true" aria-controls="{{menu.nombre}}">
@@ -72,7 +72,7 @@
               <h2>Categoria: {{currentCategory}}
                 <a  href="#" class="btn btn-primary btn-xs pull-right" ng-click="showWindow()"><i class="glyphicon glyhicon-plus-sign"></i>Agregar Producto</a></h2>
               <ul>
-                <li ng-repeat="producto in productos | filter: {producto: currentCategory} | filter:search">
+                <li ng-repeat="producto in productos | filter:search">
                   <p>
                     <a href="#">{{producto.nombre}}</a>
 
